@@ -1,0 +1,222 @@
+<!Doctype html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+</head>
+<body onscroll="closeMenu(), easeIntoView(), count()">
+    <div onclick="expandMenu(), count(300), count(15)" class="menu-burger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav>
+        <div class = "nav-menu">
+            <ul class= "nav-menu-list">
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Tools</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </nav>
+    <div onclick="closeMenu()">
+        <section class="l-hero">
+            <div class="hero">
+                <h1>Nitrogen</h1>
+                <h3>In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor</h3>
+                <button>Get Started</button>
+            </div>
+        </section>
+        <section class="l-benefits">
+            <div class = "benefits">
+                <div class="benefits-info target">
+                    <div class="benefits-icon"><img src="icons/eye.svg" alt="eye"></div>                
+                    <h3>SED CONVALLIS</h3>
+                    <p>Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum</p>
+                    <button>Praesent</button>
+                </div>
+                <div class="benefits-info target">
+                    <div class="benefits-icon"><img src="icons/knot.svg" alt="knot"></div>
+                    <h3>CURABITUR SODALES</h3>
+                    <p>Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam.</p>
+                    <button>Praesent</button>
+                </div>
+                <div class="benefits-info target">
+                    <div class="benefits-icon"><img src="icons/power.svg" alt="power button"></div>
+                    <h3>VENENATIS TRISTIQUE</h3>
+                    <p>Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas</p>
+                    <button>Praesent</button>
+                </div>
+            </div>
+            
+        </section>
+        <section class="l-about">
+            <div class="about">
+                <h2>Why Choose Us?</h2>
+                <p>Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus 
+                    orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor.</p>
+                <div>
+                    <div class="about-info target">
+                        <div class="about-icon"><img src="icons/check.svg" alt="check mark"></div>
+                        <div class="about-text">
+                            <h3>SED CONVALLIS</h3>
+                            <p>Morbi lacinia molestie dui. Praesent blandit dolor.</p>
+                        </div>
+                    </div>
+                    <div class="about-info target">
+                        <div class="about-icon"><img src="icons/check.svg" alt="check mark"></div>
+                        <div class="about-text">
+                            <h3>CURABITUR SODALES</h3>
+                            <p>Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam.</p>
+                        </div>
+                    </div>
+                    <div class="about-info target">
+                        <div class="about-icon"><img src="icons/check.svg" alt="check mark"></div>
+                        <div class="about-text">
+                            <h3>VENENATIS TRISTIQUE</h3>
+                            <p>Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas</p>
+                        </div>
+                    </div>
+            </div>
+                <div class="about-video">
+                    <iframe src="https://www.youtube.com/embed/VAz3HfbdKyQ?rel=0&amp;showinfo=0"></iframe>
+                </div>
+            </div>
+        </section>
+        <section class="l-stats">
+            <div class="stats">
+                <div>
+                    <img src="" alt="">
+                    <h3 class="stats-counter" data-count="90"></h3>
+                    <p>QUISQUE NISL</p>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <h3 class="stats-counter" data-count="200"></h3>
+                    <p>SED FELIS</p>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <h3 class="stats-counter" data-count="2124"></h3>
+                    <p>DIGNISSIM IN</p>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <h3 class="stats-counter" data-count="11122"></h3>
+                    <p>SIT AMET</p>
+                </div>
+            </div>
+           
+        </section>
+        <section>
+            <h2>Testimonials</h2>
+            <div>
+                <div>
+                    <img src="" alt="">
+                    <p>ut ligula <span>vel nunc</span></p>
+                    <p>Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue.</p>
+                </div>
+                <div>
+                    <img src="" alt="">
+                <p>convallis tristique <span>vel nunc</span></p>
+                    <p>Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas 
+                        porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.</p>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <p>lectus risus <span>vel nunc</span></p>
+                    <p>Sed convallis tristique sem. Proin ut ligula vel nunc egestas 
+                        porttitor.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>What We Offer</h2>
+            <p>Proin ut ligula vel nunc egestas 
+                    porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.</p>
+            <ul>
+                <li>Ligula</li>
+                <li>Morbi lectus</li>
+                <li>Iaculis</li>
+                <li>Luctus</li>
+            </ul>
+        </section>
+        <section>
+            <div>
+                <img src="" alt="">
+            </div>
+            <div>
+                <h2>Sed convallis tristique</h2>
+                <p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.</p>
+                <div>
+                    <p>Aenean quam</p>
+                    <p>Vel iaculis vel, suscipit quis, luctus non.</p>
+                </div>
+                <div>
+                    <p>Pellentesque</p>
+                    <p>Aenean quam, Maecenas mattis, tristique sem</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Get Started</h2>
+            <form action="">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <input type="submit" value="Sign Up">
+            </form>
+        </section>
+        <footer>
+            <div>
+                <h3>Pellentesque</h3>
+                <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. 
+                    Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora 
+                    torquent per conubia nostra, per inceptos himenaeos. </p>
+                <p><a href="#">Sed nisi</a></p>
+            </div>
+            <div>
+                <ul>
+                    <li>conubia</li>
+                    <li>augue</li>
+                    <li>nostra</li>
+                    <li>conubia</li>
+                    <li>tellus</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>lacinia</li>
+                    <li>duis</li>
+                    <li>sagittis</li>
+                    <li>arcu</li>
+                    <li>aptent</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>pellentes</li>
+                    <li>lacinia</li>
+                    <li>sociosqu</li>
+                    <li>litora</li>
+                    <li>ipsum</li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p>copyright</p>
+                    <p>Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+</body>
