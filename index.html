@@ -1,10 +1,13 @@
 <!Doctype html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <script src="index.js"></script>
 </head>
+
 <body onscroll="closeMenu(), easeIntoView(), count()">
     <div onclick="expandMenu(), count(300), count(15)" class="menu-burger">
         <div></div>
@@ -14,15 +17,16 @@
     <nav>
         <div class = "nav-menu">
             <ul class= "nav-menu-list">
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Tools</li>
-                <li>Contact</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Tools</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </div>
     </nav>
-    <div onclick="closeMenu()">
+    <div id="cover"></div>
+    <div id="container" onclick="closeMenu()">
         <section class="l-hero">
             <div class="hero">
                 <h1>Nitrogen</h1>
@@ -30,190 +34,207 @@
                 <button>Get Started</button>
             </div>
         </section>
+
         <section class="l-benefits">
             <div class = "benefits">
                 <div class="benefits-info target">
-                    <div class="benefits-icon"><img src="icons/eye.svg" alt="eye"></div>                
+                    <div class="large-icon"><img src="icons/eye.svg" alt="eye"></div>                
                     <h3>SED CONVALLIS</h3>
                     <p>Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum</p>
                     <button>Praesent</button>
                 </div>
                 <div class="benefits-info target">
-                    <div class="benefits-icon"><img src="icons/knot.svg" alt="knot"></div>
+                    <div class="large-icon"><img src="icons/knot.svg" alt="knot"></div>
                     <h3>CURABITUR SODALES</h3>
                     <p>Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam.</p>
                     <button>Praesent</button>
                 </div>
                 <div class="benefits-info target">
-                    <div class="benefits-icon"><img src="icons/power.svg" alt="power button"></div>
+                    <div class="large-icon"><img src="icons/power.svg" alt="power button"></div>
                     <h3>VENENATIS TRISTIQUE</h3>
                     <p>Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas</p>
                     <button>Praesent</button>
                 </div>
-            </div>
-            
+            </div>    
         </section>
+
         <section class="l-about">
             <div class="about">
-                <h2>Why Choose Us?</h2>
-                <p>Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus 
-                    orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor.</p>
-                <div>
-                    <div class="about-info target">
-                        <div class="about-icon"><img src="icons/check.svg" alt="check mark"></div>
+                <div class = "about-info">
+                    <h2>Why Choose Us?</h2>
+                    <p>Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus 
+                            orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor.</p>
+                </div>
+                
+                <div class = "about-item-list">
+                    <div class="about-item target">
+                        <div class="small-icon"><img src="icons/check.svg" alt="check mark"></div>
                         <div class="about-text">
                             <h3>SED CONVALLIS</h3>
                             <p>Morbi lacinia molestie dui. Praesent blandit dolor.</p>
                         </div>
                     </div>
-                    <div class="about-info target">
-                        <div class="about-icon"><img src="icons/check.svg" alt="check mark"></div>
+                    <div class="about-item target">
+                        <div class="small-icon"><img src="icons/check.svg" alt="check mark"></div>
                         <div class="about-text">
                             <h3>CURABITUR SODALES</h3>
                             <p>Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam.</p>
                         </div>
                     </div>
-                    <div class="about-info target">
-                        <div class="about-icon"><img src="icons/check.svg" alt="check mark"></div>
+                    <div class="about-item target">
+                        <div class="small-icon"><img src="icons/check.svg" alt="check mark"></div>
                         <div class="about-text">
                             <h3>VENENATIS TRISTIQUE</h3>
                             <p>Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas</p>
                         </div>
                     </div>
-            </div>
+                </div>
                 <div class="about-video">
                     <iframe src="https://www.youtube.com/embed/VAz3HfbdKyQ?rel=0&amp;showinfo=0"></iframe>
                 </div>
             </div>
         </section>
+
         <section class="l-stats">
             <div class="stats">
-                <div>
-                    <img src="" alt="">
-                    <h3 class="stats-counter" data-count="90"></h3>
+                <div class = "stats-item target">
+                    <div class="large-icon"><img src="icons/eye.svg" alt="eye"></div>
+                    <h3 class="stats-counter" data-count="213">0</h3>
                     <p>QUISQUE NISL</p>
                 </div>
-                <div>
-                    <img src="" alt="">
-                    <h3 class="stats-counter" data-count="200"></h3>
+                <div class = "stats-item target">
+                    <div class="large-icon"><img src="icons/briefcase.svg" alt="brief case"></div>
+                    <h3 class="stats-counter" data-count="56">0</h3>
                     <p>SED FELIS</p>
                 </div>
-                <div>
-                    <img src="" alt="">
-                    <h3 class="stats-counter" data-count="2124"></h3>
+                <div class = "stats-item target">
+                    <div class="large-icon"><img src="icons/anchor.svg" alt="anchor"></div>
+                    <h3 class="stats-counter" data-count="748">0</h3>
                     <p>DIGNISSIM IN</p>
                 </div>
-                <div>
-                    <img src="" alt="">
-                    <h3 class="stats-counter" data-count="11122"></h3>
+                <div class = "stats-item target">
+                    <div class="large-icon"><img src="icons/clock.svg" alt="clock"></div>
+                    <h3 class="stats-counter" data-count="1223">0</h3>
                     <p>SIT AMET</p>
                 </div>
-            </div>
-           
+            </div>   
         </section>
-        <section>
+
+        <section class = "l-testimonial">
             <h2>Testimonials</h2>
-            <div>
-                <div>
+            <div class = "carousel target" onclick="carouselScroll()">
+                <div class = "testimonial">
                     <img src="" alt="">
-                    <p>ut ligula <span>vel nunc</span></p>
-                    <p>Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue.</p>
+                    <p>Uvallit Ligula, <a href="#">vel nunc</a></p>
+                    <p>"Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue."</p>
                 </div>
-                <div>
+                <div class = "testimonial is-active">
                     <img src="" alt="">
-                <p>convallis tristique <span>vel nunc</span></p>
-                    <p>Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas 
-                        porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.</p>
+                    <p>Convallis Tristique, <a href="#">vel nunc</a></p>
+                    <p>"Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas 
+                        porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa."</p>
                 </div>
-                <div>
+                <div class = "testimonial">
                     <img src="" alt="">
-                    <p>lectus risus <span>vel nunc</span></p>
-                    <p>Sed convallis tristique sem. Proin ut ligula vel nunc egestas 
-                        porttitor.</p>
+                    <p>Lectus Risus, <a href="#">vel nunc</a></p>
+                    <p>"Sed convallis tristique sem. Proin ut ligula vel nunc egestas 
+                        porttitor."</p>
                 </div>
+                <div class="testimonial-three-dot"><div class="testimonial-dot"></div><div class="testimonial-dot is-active"></div><div class="testimonial-dot"></div></div>
             </div>
         </section>
-        <section>
+        
+        <section class = "services">
             <h2>What We Offer</h2>
             <p>Proin ut ligula vel nunc egestas 
                     porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.</p>
-            <ul>
-                <li>Ligula</li>
-                <li>Morbi lectus</li>
-                <li>Iaculis</li>
-                <li>Luctus</li>
+            <ul class = "services-list">
+                <li class = "target"><a href="#">Ligula</a></li>
+                <li class = "target"><a href="#">Morbi lectus</a></li>
+                <li class = "target"><a href="#">Iaculis</a></li>
+                <li class = "target"><a href="#">Luctus</a></li>
             </ul>
         </section>
-        <section>
-            <div>
-                <img src="" alt="">
+        
+        <section class = "philosophy">
+            <div class = "philosophy-xl-icon">
+                <img src="icons/big-knot.svg" alt="knot">
             </div>
-            <div>
+            <div class = "philosophy-info target">
                 <h2>Sed convallis tristique</h2>
-                <p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.</p>
-                <div>
-                    <p>Aenean quam</p>
-                    <p>Vel iaculis vel, suscipit quis, luctus non.</p>
-                </div>
-                <div>
-                    <p>Pellentesque</p>
-                    <p>Aenean quam, Maecenas mattis, tristique sem</p>
+                <p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. 
+                        Fusce nec tellus sed augue semper porta.</p>
+                <div class = "philosophy-item">
+                    <div class = "philosophy-item-info">
+                        <p>Aenean quam</p>
+                        <p>Vel iaculis vel, suscipit quis, luctus non.</p>
+                    </div>
+                    <div class = "philosophy-item-info">
+                        <p>Pellentesque</p>
+                        <p>Aenean quam, Maecenas mattis, tristique sem</p>
+                    </div>
                 </div>
             </div>
         </section>
-        <section>
+        
+        <section class = "signup">
             <h2>Get Started</h2>
-            <form action="">
+            <form class = "signup-form target" action="">
                 <input type="email" placeholder="Email">
                 <input type="password" placeholder="Password">
                 <input type="submit" value="Sign Up">
             </form>
         </section>
+        
         <footer>
-            <div>
-                <h3>Pellentesque</h3>
-                <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. 
-                    Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora 
-                    torquent per conubia nostra, per inceptos himenaeos. </p>
-                <p><a href="#">Sed nisi</a></p>
-            </div>
-            <div>
-                <ul>
-                    <li>conubia</li>
-                    <li>augue</li>
-                    <li>nostra</li>
-                    <li>conubia</li>
-                    <li>tellus</li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li>lacinia</li>
-                    <li>duis</li>
-                    <li>sagittis</li>
-                    <li>arcu</li>
-                    <li>aptent</li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li>pellentes</li>
-                    <li>lacinia</li>
-                    <li>sociosqu</li>
-                    <li>litora</li>
-                    <li>ipsum</li>
-                </ul>
-            </div>
-            <div>
-                <div>
-                    <p>copyright</p>
-                    <p>Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+            <div class="footer">
+                <div class="footer-info">
+                    <h3>Pellentesque</h3>
+                    <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. 
+                        Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora 
+                        torquent per conubia nostra, per inceptos himenaeos. </p>
+                    <p><a href="#">Sed nisi</a></p>
                 </div>
-                <div>
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                <div class="footer-links">
+                    <div>
+                        <ul class = "footer-list">
+                            <li><a href="#">conubia</a></li>
+                            <li><a href="#">augue</a></li>
+                            <li><a href="#">nostra</a></li>
+                            <li><a href="#">conubia</a></li>
+                            <li><a href="#">tellus</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class = "footer-list">
+                            <li><a href="#">lacinia</a></li>
+                            <li><a href="#">duis</a></li>
+                            <li><a href="#">sagittis</a></li>
+                            <li><a href="#">arcu</a></li>
+                            <li><a href="#">aptent</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class = "footer-list">
+                            <li><a href="#">pellentes</a></li>
+                            <li><a href="#">lacinia</a></li>
+                            <li><a href="#">sociosqu</a></li>
+                            <li><a href="#">litora</a></li>
+                            <li><a href="#">ipsum</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class = "footer-copy-social">
+                    <div class = "footer-copy">
+                        <p>&copy; All Rights Reserved</p>
+                        <p>Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
                 </div>
             </div>
         </footer>

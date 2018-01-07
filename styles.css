@@ -3,6 +3,13 @@
 Base Rules
 ================================================
 */
+body {
+    background-color: #FFF8E1;
+}
+
+* {
+    font-family: 'Arimo', sans-serif !important;
+}
 
 p {
     font-size: 16px;
@@ -23,6 +30,48 @@ section {
     margin-bottom: 64px;
 }
 
+button,
+input[type='submit'] {
+    color: white;
+    padding: auto 16px;
+    font-weight: bold;
+    background-image: radial-gradient(#FFAB91, #FF5722);
+    border: none;
+    border-radius: 5px;
+    min-width: 60px;
+    min-height: 40px;
+    -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.75);
+}
+
+button:hover,
+input[type='submit']:hover {
+    cursor: pointer;
+}
+
+button:active,
+input[type='submit']:active {
+    background-image: radial-gradient(#FF5722, #FF5722);
+    -webkit-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+}
+
+button:focus,
+input[type='submit']:focus {
+    outline-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #FF5722;
+}
+
+a:hover {
+    color: #DD2C00;
+}
+
 /*
 ================================================
 Nav Bar Layout
@@ -30,12 +79,21 @@ Nav Bar Layout
 */
 
 nav {
+    height: 100%;
     width: 280px;
     position: absolute;
     margin-left: -280px;
     -webkit-transition: margin-left 1s ease;
     -moz-transition: margin-left 1s ease;
     transition: margin-left 1s ease;
+}
+
+@media screen and (min-width:633px) {
+    nav {
+        margin-left:0;
+        height: auto;
+        width: 100%
+    }
 }
 
 /*
@@ -46,7 +104,8 @@ Hero Layout
 
 .l-hero {
     height:600px;
-    width: 100%
+    width: 100%;
+    background-image: linear-gradient(to bottom right,	hsl(0, 0%, 13%), hsla(14, 100%,57%,.5));
 }
 
 /*
@@ -60,12 +119,14 @@ Hero Module
 }
 
 .hero > h1 {
+    color:white;
     text-align: center;
     margin-bottom: 24px;
     font-size: 48px;
 }
 
 .hero > h3 {
+    color: white;
     text-align: center;
 }
 
@@ -75,23 +136,88 @@ Hero Module
     margin: 24px auto;
 }
 
+@media screen and (min-width:400px) {
+    .hero > h1 {
+        font-size: 100px;
+    }
+}
+
+@media screen and (min-width:631px) {
+    .hero {
+        max-width: 900px;
+        margin: auto;
+    }
+    .hero > h1 {
+        font-size: 150px;
+    }
+    .hero > h3 {
+        margin-top: 48px;
+        padding-right: 24px;
+    }
+    .hero > button {
+        margin-top: 48px;
+        min-width: 100px;
+    }
+}
+
 /*
 ================================================
 Nav Bar Module
 ================================================
 */
+
 nav.is-expanded {
+    position: absolute;
+    z-index: 1;
     margin-left: 0px;
 }
 
 .nav-menu {
+    height:100%;
     background-color: white;
-    height: 600px;
 }
 
 .nav-menu-list > li {
     font-size: 24px;
-    margin: 16px 16px;
+    padding: 16px 16px;
+}
+
+.nav-menu-list > li:first-of-type {
+    padding-top: 80px;
+}
+
+#cover.is-expanded {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width:633px) {
+    .nav-menu-list > li:first-of-type {
+        padding-top: 16px;
+    }
+    
+    nav {
+        background-color: #212121;
+    }
+    .nav-menu {
+        max-width: 1400px;
+        margin: auto;
+        background-color: #212121;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .nav-menu-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 /*
@@ -100,6 +226,9 @@ Menu Burger Module
 ================================================
 */
 .menu-burger {
+    position: absolute;
+    z-index: 2;
+    margin: 16px 0 0 16px;
     width: 35px;
 }
 
@@ -107,13 +236,14 @@ Menu Burger Module
     height: 4px;
     width: 35px;
     margin: 5px 0;
-    background-color: black;
-    -webkit-transition: transform 1s ease, opacity 1s ease;
-    -moz-transition: transform 1s ease, opacity 1s ease;
-    transition: transform 1s ease, opacity 1s ease;
+    background-color: white;
+    -webkit-transition: transform 1s ease, opacity 1s ease, background-color 1s ease;
+    -moz-transition: transform 1s ease, opacity 1s ease, background-color 1s ease;
+    transition: transform 1s ease, opacity 1s ease, background-color 1s ease;
 }
 
 .menu-burger.is-expanded > div:nth-of-type(1) {
+    background-color: #212121;
     transform: rotate(45deg) translate(3px,10px);
 }
 
@@ -122,7 +252,14 @@ Menu Burger Module
 }
 
 .menu-burger.is-expanded > div:nth-of-type(3) {
+    background-color: #212121;
     transform: rotate(-45deg) translate(3px,-10px);
+}
+
+@media screen and (min-width:633px) {
+    .menu-burger{
+        display: none;
+    }
 }
 
 /*
@@ -131,7 +268,7 @@ Benefits Module
 ==================================================
 */
 .benefits-info {
-    margin-bottom: 40px;
+    margin-bottom: 88px;
 }
 
 .benefits-info > h3 {
@@ -149,18 +286,24 @@ Benefits Module
     height: 40px;
 }
 
-.benefits-icon  {
-    height: 64px;
-    width: 64px;
-    border-radius: 50%;
-    background-color: orange;
-    margin: 24px auto;
-}
+@media screen and (min-width:900px) {
+    .benefits {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        max-width: 900px;
+    }
 
-.benefits-icon > img {
-    display: block;
-    padding-top: 14px;
-    margin: auto;
+    .benefits-info {
+        display: flex;
+        flex-direction: column;
+        padding: auto 64px;
+        flex-basis: 30%
+    }
+
+    .benefits-info > button {
+        margin-bottom: 0;
+    }
 }
 
 /*
@@ -170,16 +313,16 @@ About Module
 */
 
 
-.about > p,
-.about > h2{
+.about-info > p,
+.about-info > h2{
     text-align: center;
 }
 
-.about > p {
+.about-info > p {
     margin-bottom: 36px;
 }
 
-.about-info {
+.about-item {
     margin-bottom: 24px;
     display: flex;
     flex-wrap: wrap;
@@ -189,19 +332,6 @@ About Module
 
 .about-text {
     width: 75%;
-}
-
-.about-icon {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-color: orange;
-    border-radius: 50%;
-    padding-top: 5px;
-}
-
-.about-icon > img {
-    margin: auto;
 }
 
     /* credit to https://benmarshall.me/responsive-iframes/ for responsive iframe technique */
@@ -223,6 +353,394 @@ About Module
     height: 100%;
 }
 
+@media screen and (min-width: 900px) {
+    .about {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1400px;
+        margin: auto;
+    }
+    .about-info {
+        flex-basis: 100%;
+    }
+    .about-item-list {
+        flex-basis: 49%;
+    }
+    .about-video {
+        flex-basis: 50%;
+        padding-bottom: 25%;
+    }
+
+}
+
+/*
+==================================================
+Stats Module
+==================================================
+*/
+
+.stats-item {
+    margin-bottom: 64px;
+}
+
+.stats-counter {
+    text-align: center;
+    font-size: 64px;
+    margin-bottom: 8px;
+}
+
+.stats-counter ~ p {
+    text-align: center;
+    font-size: 12px;
+    text-transform: capitalize;
+    font-weight: 100;
+}
+
+@media screen and (min-width: 450px) {
+    .stats {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .stats-item {
+        flex-basis:49%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .stats {
+        max-width: 900px;
+        margin: auto;
+    }
+    .stats-item {
+        flex-basis: 24%;
+    }
+}
+
+/*
+==================================================
+Testimonial Carousel Module
+==================================================
+*/
+.l-testimonial {
+    background-image: linear-gradient(to bottom right,	hsl(0, 0%, 13%), hsla(14, 100%,57%,.5));
+}
+
+.l-testimonial > h2 {
+    padding-top: 32px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.carousel {
+    user-select: none;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonial {
+    text-align: center;
+    display: none;
+}
+
+.testimonial > p {
+    color:white;
+}
+
+.testimonial > p:nth-of-type(1) {
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.testimonial.is-active {
+    display: block;
+}
+
+
+.testimonial-three-dot {
+    height:12px;
+    display:flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.testimonial-dot {
+    height: 4px;
+    width: 4px;
+    background-color:white;
+    border-radius: 50%;
+    margin: 4px 8px;
+}
+
+.testimonial-dot.is-active {
+    height: 8px;
+    width: 8px;
+    margin-top: 2px;
+}
+
+@media screen and (min-width: 557px) {
+    .carousel {
+        max-width: 900px;
+        margin:auto;
+        height: 175px;
+    }
+}
+
+
+/*
+==================================================
+Services Module
+==================================================
+*/
+
+.services > h2 {
+    text-align: center
+}
+
+.services > p {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+
+.services-list {
+    font-size: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.services-list > li {
+    margin-bottom: 16px;
+}
+
+/*
+==================================================
+Philosophy Module
+==================================================
+*/
+
+.philosophy-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.philosophy-item-info {
+    margin:16px 16px;
+}
+
+.philosophy-item-info > p:first-of-type {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.philosophy-info > h2,
+.philosophy-info > p {
+    text-align: center;
+}
+
+.philosophy-info > h2 {
+    margin-left: 16px;
+}
+
+.philosophy-info > p {
+    margin: 16px 16px;
+}
+
+.philosophy-xl-icon {
+    display: none;
+}
+
+@media screen and (min-width:700px) {
+    .philosophy {
+        display:flex;
+        align-items: center;
+        margin: auto;
+        max-width: 900px;
+        margin-bottom: 64px;
+    }
+
+    .philosophy-info {
+        margin-left: 16px;
+    }
+
+    .philosophy-info > h2,
+    .philosophy-info > p {
+        text-align: left;
+    }    
+
+    .philosophy-xl-icon {
+        display: block
+    }
+}
+
+/*
+==================================================
+Sign Up Module
+==================================================
+*/
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 250px;
+    background-image: linear-gradient(to bottom right,	hsl(0, 0%, 13%), hsla(14, 100%,57%,.5));
+    margin-bottom: 0;
+}
+
+.signup > h2 {
+    color: white;
+    font-weight: bold;
+    padding-top: 48px;
+    text-align: center;
+}
+
+.signup-form {
+    width: 290px;
+    margin: auto;
+}
+
+.signup-form > input {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 16px;
+}
+
+.signup-form > input:last-of-type {
+    width: 50%;
+    margin-left: 72px;
+    margin-bottom: 48px;
+}
+
+@media screen and (min-width:1000px) {
+    .signup-form {
+        width: 900px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .signup-form > input {
+        width: 35%;
+    }
+
+    .signup-form > input:last-of-type {
+        width: 20%;
+        margin-left:0;
+    }
+}
+
+/*
+==================================================
+Footer Module
+==================================================
+*/
+footer {
+    background-color: #212121;
+    padding-top: 36px;
+}
+
+.footer-info,
+.footer-copy-social {
+    margin: 10px 8px;
+
+}
+.footer-info > h3 {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.footer-info > p {
+    margin-bottom: 16px;
+}
+
+.footer-info > p,
+.footer-copy > p {
+    color: white;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.footer-list > li {
+    font-size: 12px;
+    margin: 20px auto;
+}
+
+@media screen and (min-width: 849px) {
+    .footer {
+        max-width: 1400px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-info {
+        flex-basis: 39%;
+    }
+    .footer-links {
+        flex-basis: 59%;
+    }
+    .footer-copy-social {
+        flex-basis: 100%;
+    }
+}
+
+/*
+==================================================
+Large Icon Module
+==================================================
+*/
+
+.large-icon  {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: #FF5722;
+    margin: 24px auto;
+}
+
+.large-icon > img {
+    display: block;
+    padding-top: 14px;
+    margin: auto;
+}
+
+/*
+==================================================
+Small Icon Module
+==================================================
+*/
+
+.small-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #FF5722;
+    border-radius: 50%;
+    padding-top: 5px;
+}
+
+.small-icon > img {
+    margin: auto;
+}
 
 /*
 ==============================================
